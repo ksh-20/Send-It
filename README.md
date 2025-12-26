@@ -49,12 +49,15 @@ SendIt is a real-time, secure **online file sharing web application** that allow
 ``` bash
 SendIt/
 ├── frontend/
+│ ├── public
 │ ├── src/
 │ │ ├── api/
 │ │ ├── components/
 │ │ ├── pages/
 │ │ ├── types/
 │ │ └── utils/
+│ ├── tsconfig.json
+│ ├── vite.config.ts
 │ └── package.json
 │
 ├── backend/
@@ -67,6 +70,8 @@ SendIt/
 │ │ ├── middlewares/
 │ │ ├── utils/
 │ │ └── temp/uploads/
+│ ├── tsconfig.json
+│ ├── vercel.json
 │ └── package.json
 │
 ├── .gitignore
