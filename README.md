@@ -30,7 +30,7 @@ SendIt is a real-time, secure **online file sharing web application** that allow
 - **Express.js**
 - **Socket.IO** (for pin based rooms for file sharing)
 - **Multer** (for file upload handling)
-- **UUID** (for pin management)
+- **UUID** (for internal sessions management)
 - **Local Disk Storage (Temporary)**
 
 ### Security & Infra
@@ -127,6 +127,10 @@ SendIt/
 ```bash
 cd backend
 npm install
+# Install below libraries
+npm install express socket.io multer uuid cors express-rate-limit
+# Install below dependencies
+npm install -D typescript ts-node nodemon @types/node @types/express @types/multer @types/uuid
 npm run dev
 ```
 
@@ -134,6 +138,10 @@ npm run dev
 ``` bash
 cd frontend
 npm install
+# Install below libraries
+npm install react react-dom socket.io-client axios react-router-dom react-dropzone
+# Install below dependencies
+npm install -D vite typescript @vitejs/plugin-react @types/react @types/react-dom
 npm run dev
 ```
 
