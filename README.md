@@ -131,22 +131,26 @@ SendIt/
 ### Backend
 ```bash
 cd backend
+# Install node modules
 npm install
 # Install below libraries
 npm install express socket.io multer uuid cors express-rate-limit
 # Install below dependencies
 npm install -D typescript ts-node nodemon @types/node @types/express @types/multer @types/uuid
+# Run the Backend
 npm run dev
 ```
 
 ### Frontend
 ``` bash
 cd frontend
+# Install node modules
 npm install
 # Install below libraries
 npm install react react-dom socket.io-client axios react-router-dom react-dropzone
 # Install below dependencies
 npm install -D vite typescript @vitejs/plugin-react @types/react @types/react-dom
+# Run the Frontend
 npm run dev
 ```
 
