@@ -46,6 +46,7 @@ SendIt is a real-time, secure **online file sharing web application** that allow
 
 ## 📁 Project Structure
 
+``` bash
 SendIt/
 ├── frontend/
 │ ├── src/
@@ -68,8 +69,9 @@ SendIt/
 │ │ └── temp/uploads/
 │ └── package.json
 │
+├── .gitignore
 └── README.md
-
+```
 
 ---
 
