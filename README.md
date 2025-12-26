@@ -1,4 +1,4 @@
-# 🔐 SendIt: An Online File Sharing Software
+# 🔐 SendIt: An Online File Sharing Application
 
 SendIt is a real-time, secure **online file sharing web application** that allows users to transfer files across the internet using a **4-digit PIN**. The sender uploads a file and shares a PIN with the receiver, who can download the file instantly-no login required and a user friendly application.
 
