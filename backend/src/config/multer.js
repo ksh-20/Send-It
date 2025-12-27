@@ -1,13 +1,16 @@
 import multer from "multer";
 import path from "path";
-import { MAX_FILE_SIZE, UPLOAD_DIR } from "./constants";
+import fs from "fs";
+import { MAX_FILE_SIZE, UPLOAD_DIR } from "./constants.js";
+
+if (!fs.existsSync(UPLOAD_DIR)) {
+  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+}
 
 const storage = multer.diskStorage({
-  destination: (_req, _file, cb) => {
-    cb(null, UPLOAD_DIR);
-  },
-  filename: (_req, file, cb) => {
-    const uniqueName = `${Date.now()}-${file.originalname}`;
+  destination: (_, __, cb) => cb(null, UPLOAD_DIR),
+  filename: (_, file, cb) => {
+    const uniqueName = Date.now() + "-" + file.originalname;
     cb(null, uniqueName);
   }
 });
