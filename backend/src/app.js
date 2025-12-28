@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
-import pinRoutes from "./routes/pinRoutes";
-import fileRoutes from "./routes/fileRoutes";
-import { errorHandler } from "./middlewares/errorHandler";
+import pinRoutes from "./routes/pinRoutes.js";
+import fileRoutes from "./routes/fileRoutes.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 
 const app = express();
 

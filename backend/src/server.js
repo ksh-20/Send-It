@@ -1,7 +1,7 @@
 import http from "http";
 import { Server } from "socket.io";
-import app from "./app";
-import { initSockets } from "./sockets";
+import app from "./app.js";
+import { socketHandler } from "./sockets/index.js";
 import { cleanupExpiredSessions } from "./utils/cleanup.js";
 
 const server = http.createServer(app);
@@ -10,7 +10,7 @@ const io = new Server(server, {
   cors: { origin: "*" }
 });
 
-initSockets(io);
+socketHandler(io);
 
 setInterval(cleanupExpiredSessions, 60 * 1000);
 
