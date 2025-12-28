@@ -49,7 +49,7 @@ SendIt is a real-time, secure **online file sharing web application** that allow
 ``` bash
 SendIt/
 ├── frontend/
-│ ├── public
+│ ├── index.html
 │ ├── src/
 │ │ ├── api/
 │ │ ├── components/
