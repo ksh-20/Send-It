@@ -6,8 +6,8 @@ export function downloadFileController(req, res) {
   const { pin } = req.params;
   const data = getPinData(pin);
 
-  if (!data) {
-    return res.status(404).json({ message: "Invalid PIN" });
+  if (!data || !data.path) {
+    return res.status(404).json({ message: "File not found or expired" });
   }
 
   const filePath = path.resolve(data.path);
