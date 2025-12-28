@@ -6,14 +6,15 @@ type Props = {
 
 export default function PinInput({ pin, setPin, onSubmit }: Props) {
   return (
-    <div>
+    <>
       <input
+        type="text"
         maxLength={4}
         value={pin}
         onChange={(e) => setPin(e.target.value)}
-        placeholder="Enter PIN"
+        placeholder="4-digit PIN"
       />
       <button onClick={onSubmit}>Connect</button>
-    </div>
+    </>
   );
 }

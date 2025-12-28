@@ -1,33 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1f2937;
 }
 
 .container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 90%;
+  max-width: 900px;
 }
 
-input, button {
-  padding: 10px;
-  margin: 5px;
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #111827;
+}
+
+p {
+  color: #6b7280;
+}
+
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #6366f1;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+.pin-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f3f4f6;
+  text-align: center;
+}
+
+.pin {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #4f46e5;
 }
 
 .progress {
-  width: 100%;
+  margin-top: 1rem;
   height: 10px;
-  background: #ddd;
+  border-radius: 10px;
+  background: #e5e7eb;
+  overflow: hidden;
 }
 
 .progress div {
   height: 100%;
-  background: green;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
 }
 
 .success {
-  color: green;
+  color: #16a34a;
+  margin-top: 0.5rem;
 }
 
 .error {
-  color: red;
+  color: #dc2626;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -9,7 +9,7 @@ export default function Receiver() {
 
   async function connect() {
     if (!validatePin(pin)) {
-      alert("Invalid PIN");
+      alert("Enter a valid 4-digit PIN");
       return;
     }
 
@@ -22,8 +22,9 @@ export default function Receiver() {
   }
 
   return (
-    <div>
-      <h1>Receive File</h1>
+    <div className="card">
+      <h1>Receive a File</h1>
+      <p>Enter the PIN shared by the sender.</p>
       <PinInput pin={pin} setPin={setPin} onSubmit={connect} />
     </div>
   );

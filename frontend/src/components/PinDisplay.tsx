@@ -4,9 +4,9 @@ type Props = {
 
 export default function PinDisplay({ pin }: Props) {
   return (
-    <div>
-      <h2>Your PIN</h2>
-      <h1>{pin}</h1>
+    <div className="pin-box">
+      <p>Share this PIN</p>
+      <div className="pin">{pin}</div>
     </div>
   );
 }
