@@ -6,16 +6,18 @@ import { errorHandler } from "./middlewares/errorHandler.js";
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(cors());
 app.use(express.json());
 
 app.use("/api/pin", pinRoutes);
 app.use("/api/file", fileRoutes);
 
-app.use(errorHandler);
-
 app.get("/", (_, res) => {
   res.send("SendIt Backend is running");
 });
+
+app.use(errorHandler);
 
 export default app;
