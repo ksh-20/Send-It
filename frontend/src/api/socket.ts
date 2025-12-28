@@ -1,6 +1,6 @@
 import { io, Socket } from "socket.io-client";
 
-const URL = "https://send-it-backend.onrender.com";
+const URL = import.meta.env.VITE_SOCKET_URL;
 
 export const socket: Socket = io(URL, {
   autoConnect: false,
