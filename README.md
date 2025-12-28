@@ -155,6 +155,22 @@ npm run dev
 
 ---
 
+## ENV Files
+
+### Backend - Save it in backend/.env
+``` bash
+PORT=3000
+CORS_ORIGIN=https://<your-frontend-render-url>.com
+```
+
+### Frontend - Save it in frontend/.env
+``` bash
+VITE_API_BASE=https://<your-backend-render-url>.com/api
+VITE_SOCKET_URL=https://<your-backend-render-url>.com
+```
+
+---
+
 ## 🌍 Deployment
 
 - Deployed on Render
