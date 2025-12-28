@@ -14,4 +14,8 @@ app.use("/api/file", fileRoutes);
 
 app.use(errorHandler);
 
+app.get("/", (_, res) => {
+  res.send("SendIt Backend is running");
+});
+
 export default app;
