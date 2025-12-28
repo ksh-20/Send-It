@@ -40,7 +40,7 @@ SendIt is a real-time, secure **online file sharing web application** that allow
 - **HTTPS**
 
 ### Deployment
-- **Vercel**
+- **Render**
 
 ---
 
@@ -71,7 +71,6 @@ SendIt/
 │ │ ├── utils/
 │ │ └── temp/uploads/
 │ ├── tsconfig.json
-│ ├── vercel.json
 │ └── package.json
 │
 ├── .gitignore
@@ -158,7 +157,7 @@ npm run dev
 
 ## 🌍 Deployment
 
-- Deployed on Vercel
+- Deployed on Render
 - Frontend and backend hosted separately
 - Built-in HTTPS
 - No Docker or external cloud storage required
@@ -167,7 +166,7 @@ npm run dev
 
 ## ⚠️ Important Notes
 
-- File storage on Vercel is ephemeral
+- File storage on Render is ephemeral
 - Files must be downloaded immediately
 - Not suitable for long-term file storage
 - Best suited for quick, one-time transfers
