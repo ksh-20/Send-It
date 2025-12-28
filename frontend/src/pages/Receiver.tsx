@@ -9,16 +9,17 @@ export default function Receiver() {
 
   async function connect() {
     if (!validatePin(pin)) {
-      alert("Enter a valid 4-digit PIN");
+      alert("Invalid Pin");
       return;
     }
 
     socket.connect();
     socket.emit("join-room", pin);
 
-    socket.on("file-available", () => {
+    const res = await fetch(`${API_BASE}/pin/validate/${pin}`);
+    if (res.ok) {
       window.location.href = `${API_BASE}/file/download/${pin}`;
-    });
+    }
   }
 
   return (

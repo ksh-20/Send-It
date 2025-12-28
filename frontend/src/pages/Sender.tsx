@@ -10,6 +10,8 @@ export default function Sender() {
     setPin(pin);
     socket.connect();
     socket.emit("join-room", pin);
+
+    socket.emit("file-ready", pin);
   }
 
   return (
