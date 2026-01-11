@@ -96,7 +96,7 @@ SendIt/
 
 - PINs are randomly generated (0000-9999)
 - Each PIN maps to a unique file session
-- PIN expires after a fixed duration (5 minutes)
+- PIN expires after a fixed duration (2 minutes)
 - Rate limiting prevents brute-force attacks and maintains network security
 - PIN becomes invalid after download or expiry
 
