@@ -2,12 +2,18 @@ import { useState } from "react";
 import FileUpload from "../components/FileUpload";
 import PinDisplay from "../components/PinDisplay";
 import { socket } from "../api/socket";
+import { Mode } from "../App";
 
-export default function Sender() {
+type Props = {
+  setMode: (mode: Mode) => void;
+};
+
+export default function Sender({ setMode }: Props) {
   const [pin, setPin] = useState("");
 
   function handlePin(pin: string) {
     setPin(pin);
+    setMode("sender");
     socket.connect();
     socket.emit("join-room", pin);
 

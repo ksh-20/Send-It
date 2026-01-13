@@ -3,8 +3,13 @@ import PinInput from "../components/PinInput";
 import { socket } from "../api/socket";
 import { API_BASE } from "../utils/constants";
 import { validatePin } from "../utils/validators";
+import { Mode } from "../App";
 
-export default function Receiver() {
+type Props = {
+  setMode: (mode: Mode) => void;
+};
+
+export default function Receiver({ setMode }: Props) {
   const [pin, setPin] = useState("");
 
   async function connect() {
@@ -13,6 +18,7 @@ export default function Receiver() {
       return;
     }
 
+    setMode("receiver");
     socket.connect();
     socket.emit("join-room", pin);
 
