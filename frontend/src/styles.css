@@ -119,3 +119,8 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.reset-btn {
+  margin-left: 250px;
+  background-color: lightskyblue;
+}

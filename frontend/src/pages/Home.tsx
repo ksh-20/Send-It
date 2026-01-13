@@ -17,6 +17,11 @@ export default function Home({ mode, setMode }: Props) {
       {(mode === "idle" || mode === "receiver") && (
         <Receiver setMode={setMode} />
       )}
+
+      <button onClick={() => window.location.reload()} className="reset-btn">
+        Start New Transfer
+      </button>
+
     </div>
   );
 }
